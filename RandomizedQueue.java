@@ -65,7 +65,10 @@ public RandomizedQueue() {
     * @return the item on this queue that was least recently added
     * @throws NoSuchElementException if this queue is empty
     */
-   public Item dequeue() {
+   /**
+ * @return
+ */
+public Item dequeue() {
        if (isEmpty()) throw new NoSuchElementException("Queue empty");
        int rnd_index = StdRandom.uniform(element_count);
        Item rtn = queue[rnd_index];
